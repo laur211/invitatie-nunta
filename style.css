@@ -166,3 +166,11 @@ input {
         font-size: 14px;
     }
 }
+
+/* mesaj invitație */
+.invite-msg {
+    font-family: 'Great Vibes', cursive;
+    font-size: 26px;
+    color: #b76e79;
+    margin-bottom: 10px;
+}
