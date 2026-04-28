@@ -120,7 +120,7 @@ p {
 }
 
 /* INPUT */
-input {
+.p {
     display: block;
     margin: 10px auto;
     padding: 12px;
