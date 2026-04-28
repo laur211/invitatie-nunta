@@ -2,7 +2,6 @@ body {
     margin: 0;
     font-family: 'Playfair Display', serif;
     background: linear-gradient(180deg, #f9f7f4, #f3ece6);
-    color: #333;
 }
 
 /* HERO */
@@ -14,7 +13,7 @@ body {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: url('couple.jpg') center/cover no-repeat;
+    background: url('couple.jpg') center center / cover no-repeat;
     filter: brightness(0.8);
 }
 
@@ -39,34 +38,33 @@ body {
 /* TEXT */
 h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: 60px;
+    font-size: 48px;
     color: #f5e6c8;
     text-shadow: 0 3px 15px rgba(0,0,0,0.6);
 }
 
 p {
-    font-size: 18px;
-    max-width: 600px;
-    line-height: 1.8;
+    font-size: 16px;
+    max-width: 90%;
+    line-height: 1.7;
     color: white;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.7);
 }
 
 /* SECTION */
 .section {
-    padding: 70px 20px;
+    padding: 60px 15px;
     text-align: center;
 }
 
 .section h2 {
     font-family: 'Great Vibes', cursive;
-    font-size: 40px;
+    font-size: 32px;
     color: #b76e79;
 }
 
 /* DATE */
 .date-title {
-    font-size: 28px;
+    font-size: 24px;
     color: #c9a96e;
 }
 
@@ -74,51 +72,51 @@ p {
 .countdown {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     flex-wrap: wrap;
 }
 
 .box {
     background: white;
-    padding: 12px;
+    padding: 10px;
     border-radius: 10px;
     min-width: 60px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
-/* DETALII */
+/* DETALII – ACUM PE RAND SI PE MOBIL */
 .details-container {
     display: flex;
-    flex-direction: column;
-    gap: 40px;
+    justify-content: center;
+    gap: 15px;
     margin-top: 30px;
 }
 
 .details-box {
-    max-width: 320px;
-    margin: auto;
-    line-height: 1.8;
+    width: 48%;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 .details-box strong {
     display: block;
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    margin-bottom: 8px;
 }
 
 .details-text {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 /* BUTTON */
 .map-btn {
     display: inline-block;
-    padding: 12px 22px;
-    border-radius: 25px;
+    padding: 10px 16px;
+    border-radius: 20px;
     background: linear-gradient(45deg, #c9a96e, #b76e79);
     color: white;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* INPUT */
@@ -126,7 +124,7 @@ input {
     display: block;
     margin: 10px auto;
     padding: 12px;
-    width: 80%;
+    width: 90%;
     border-radius: 25px;
     border: 1px solid #ddd;
 }
@@ -143,7 +141,7 @@ input {
     transform: translateY(0);
 }
 
-/* MOBILE */
+/* DESKTOP */
 @media (min-width: 768px) {
 
     h1 {
@@ -152,15 +150,19 @@ input {
 
     p {
         font-size: 20px;
+        max-width: 600px;
     }
 
     .details-container {
-        flex-direction: row;
-        justify-content: center;
         gap: 100px;
     }
 
     .details-box {
-        text-align: left;
+        width: 260px;
+        font-size: 18px;
+    }
+
+    .map-btn {
+        font-size: 14px;
     }
 }

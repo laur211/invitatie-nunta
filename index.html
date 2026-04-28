@@ -30,7 +30,7 @@
     </div>
 </section>
 
-<!-- DATE + COUNTDOWN -->
+<!-- DATE -->
 <section class="section fade">
     <h2 class="date-title">5 Septembrie 2026</h2>
 
@@ -84,7 +84,6 @@
 </section>
 
 <script>
-// scroll animation
 const elements = document.querySelectorAll(".fade");
 
 window.addEventListener("scroll", () => {
@@ -96,7 +95,6 @@ window.addEventListener("scroll", () => {
     });
 });
 
-// countdown
 const targetDate = new Date("Sep 5, 2026 16:30:00").getTime();
 
 setInterval(() => {
