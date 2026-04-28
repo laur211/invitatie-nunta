@@ -12,6 +12,7 @@
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
     <div class="hero-bg"></div>
     <div class="overlay"></div>
@@ -29,7 +30,11 @@
     </div>
 </section>
 
-<section class="section fade">
+<!-- PAGINA 2 -->
+<section class="section fade hearts-section">
+
+    <div class="hearts"></div>
+
     <h2 class="date-title">5 Septembrie 2026</h2>
 
     <div class="countdown">
@@ -40,11 +45,14 @@
     </div>
 </section>
 
-<section class="section fade">
+<!-- PAGINA 3 -->
+<section class="section fade hearts-section">
+
+    <div class="hearts"></div>
+
     <h2>Detalii</h2>
 
     <div class="details-container">
-
         <div class="details-box">
             <strong>Cununia religioasă</strong>
             <div class="details-text">
@@ -68,35 +76,31 @@
                 Vezi pe hartă
             </a>
         </div>
-
     </div>
 </section>
 
-<!-- RSVP -->
-<section class="section fade">
-    
+<!-- CONFIRM -->
+<section class="section fade confirm-section">
     <p class="invite-msg">Vă așteptăm cu drag ❤️</p>
-
     <h2>Confirmare</h2>
 
-    <p>0739651559 - Badiu Laurentiu</p>
-    <p>0757752144 - Badiu Madalina</p>
+    <input type="text" placeholder="Telefon">
+    <input type="text" placeholder="Telefon (opțional)">
 </section>
 
 <script>
+// SCROLL
 const elements = document.querySelectorAll(".fade");
-
 window.addEventListener("scroll", () => {
     elements.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
             el.classList.add("show");
         }
     });
 });
 
+// COUNTDOWN
 const targetDate = new Date("Sep 5, 2026 16:30:00").getTime();
-
 setInterval(() => {
     const now = new Date().getTime();
     const diff = targetDate - now;
@@ -106,6 +110,20 @@ setInterval(() => {
     document.getElementById("minutes").innerText = Math.floor((diff % (1000*60*60)) / (1000*60));
     document.getElementById("seconds").innerText = Math.floor((diff % (1000*60)) / 1000);
 }, 1000);
+
+// 💖 HEARTS (pentru toate secțiunile)
+document.querySelectorAll(".hearts").forEach(container => {
+    for (let i = 0; i < 20; i++) {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+        heart.style.opacity = Math.random();
+
+        container.appendChild(heart);
+    }
+});
 </script>
 
 </body>
