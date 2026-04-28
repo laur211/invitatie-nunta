@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mădălina & Laurențiu</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-bg"></div>
+    <div class="overlay"></div>
+    <div class="grain"></div>
+
+    <div class="content">
+        <h1>Mădălina & Laurențiu</h1>
+
+        <p>
+            Unele povești încep cu un simplu „bună”…  
+            iar a noastră a înflorit într-un „pentru totdeauna”.  
+            <br><br>
+            Cu emoție și iubire, vă invităm să fiți alături de noi  
+            în ziua în care inimile noastre devin una.
+        </p>
+    </div>
+</section>
+
+<!-- DATE + COUNTDOWN -->
+<section class="section fade">
+    <h2 class="date-title">5 Septembrie 2026</h2>
+
+    <div class="countdown">
+        <div class="box"><span id="days">0</span><br>zile</div>
+        <div class="box"><span id="hours">0</span><br>ore</div>
+        <div class="box"><span id="minutes">0</span><br>min</div>
+        <div class="box"><span id="seconds">0</span><br>sec</div>
+    </div>
+</section>
+
+<!-- DETALII -->
+<section class="section fade">
+    <h2>Detalii</h2>
+
+    <div class="details-container">
+
+        <div class="details-box left">
+            <strong>Cununia religioasă</strong><br>
+
+            <span class="nowrap">
+                Biserica „Nașterea Maicii Domnului”
+            </span><br>
+
+            Berca · 16:30<br><br>
+
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Biserica+Nasterea+Maicii+Domnului+Berca" target="_blank">
+                Vezi pe hartă
+            </a>
+        </div>
+
+        <div class="details-box right">
+            <strong>Petrecerea</strong><br>
+            Complex Turistic Măgura<br>
+            Restaurant MOSS · 20:00<br><br>
+
+            <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Complex+Turistic+Magura+Restaurant+MOSS" target="_blank">
+                Vezi pe hartă
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- RSVP -->
+<section class="section fade">
+    <h2>Confirmare</h2>
+
+    <input type="text" placeholder="Telefon">
+    <input type="text" placeholder="Telefon (opțional)">
+</section>
+
+<script>
+// SCROLL
+const elements = document.querySelectorAll(".fade");
+
+window.addEventListener("scroll", () => {
+    elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            el.classList.add("show");
+        }
+    });
+});
+
+// COUNTDOWN
+const targetDate = new Date("Sep 5, 2026 16:30:00").getTime();
+
+setInterval(() => {
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+
+    document.getElementById("days").innerText = Math.floor(diff / (1000*60*60*24));
+    document.getElementById("hours").innerText = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    document.getElementById("minutes").innerText = Math.floor((diff % (1000*60*60)) / (1000*60));
+    document.getElementById("seconds").innerText = Math.floor((diff % (1000*60)) / 1000);
+}, 1000);
+</script>
+
+</body>
+</html>
