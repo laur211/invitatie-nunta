@@ -25,13 +25,6 @@ body {
     background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.65));
 }
 
-.grain {
-    position: absolute;
-    inset: 0;
-    background: url('https://grainy-gradients.vercel.app/noise.svg');
-    opacity: 0.1;
-}
-
 .content {
     position: relative;
     z-index: 2;
@@ -40,20 +33,22 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 /* TEXT */
 h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: 80px;
+    font-size: 70px;
     color: #f5e6c8;
     text-shadow: 0 3px 15px rgba(0,0,0,0.6);
+    text-align: center;
 }
 
 p {
-    font-size: 22px;
-    max-width: 650px;
-    line-height: 1.8;
+    font-size: 20px;
+    max-width: 600px;
+    line-height: 1.7;
     color: white;
     text-shadow: 0 2px 10px rgba(0,0,0,0.7);
     text-align: center;
@@ -61,19 +56,19 @@ p {
 
 /* SECTION */
 .section {
-    padding: 100px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
 .section h2 {
     font-family: 'Great Vibes', cursive;
-    font-size: 55px;
+    font-size: 48px;
     color: #b76e79;
 }
 
 /* DATE */
 .date-title {
-    font-size: 40px;
+    font-size: 36px;
     color: #c9a96e;
 }
 
@@ -81,21 +76,22 @@ p {
 .countdown {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .box {
     background: white;
-    padding: 18px;
+    padding: 15px;
     border-radius: 10px;
-    min-width: 80px;
+    min-width: 70px;
 }
 
 /* DETALII */
 .details-container {
     display: flex;
     justify-content: center;
-    gap: 120px;
+    gap: 100px;
     position: relative;
     margin-top: 40px;
 }
@@ -109,14 +105,14 @@ p {
 }
 
 .details-box {
-    width: 260px;
+    width: 250px;
     font-size: 18px;
 }
 
 .left { text-align: right; }
 .right { text-align: left; }
 
-/* NU WRAP */
+/* FIX text pe o linie */
 .nowrap {
     white-space: nowrap;
 }
@@ -145,7 +141,7 @@ input {
 /* ANIMATION */
 .fade {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(40px);
     transition: 1s;
 }
 
@@ -154,8 +150,29 @@ input {
     transform: translateY(0);
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 48px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .section {
+        padding: 60px 15px;
+    }
+
+    .section h2 {
+        font-size: 36px;
+    }
+
+    .date-title {
+        font-size: 28px;
+    }
+
     .details-container {
         flex-direction: column;
         gap: 30px;
@@ -167,6 +184,14 @@ input {
 
     .left, .right {
         text-align: center;
+    }
+
+    .details-box {
+        width: 100%;
+    }
+
+    input {
+        width: 90%;
     }
 
     .nowrap {
