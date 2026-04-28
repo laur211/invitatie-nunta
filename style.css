@@ -120,7 +120,7 @@ p {
 }
 
 /* INPUT */
-.p {
+input {
     display: block;
     margin: 10px auto;
     padding: 12px;
@@ -204,54 +204,4 @@ p {
     margin: 6px 0;
     font-size: 20px;
     color: black;
-}
-/* 💖 HEARTS */
-.hearts-section {
-    position: relative;
-    overflow: hidden;
-}
-
-.hearts {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.heart {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: radial-gradient(circle, #ff9eb5, #ff5c8a);
-    transform: rotate(45deg);
-    animation: fall linear infinite;
-}
-
-.heart::before,
-.heart::after {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: inherit;
-    border-radius: 50%;
-}
-
-.heart::before {
-    top: -5px;
-    left: 0;
-}
-
-.heart::after {
-    left: -5px;
-    top: 0;
-}
-
-@keyframes fall {
-    0% {
-        transform: translateY(-10vh) rotate(45deg);
-    }
-    100% {
-        transform: translateY(110vh) rotate(45deg);
-    }
 }
